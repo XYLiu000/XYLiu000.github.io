@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>LC-669-修剪二叉树</title>
+      <link href="/post/3.html"/>
+      <url>/post/3.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="LeetCode-669-修剪二叉树"><a href="#LeetCode-669-修剪二叉树" class="headerlink" title="LeetCode-669 修剪二叉树"></a>LeetCode-669 修剪二叉树</h1><p>题目链接：<a href="https://leetcode.cn/problems/trim-a-binary-search-tree/">669. 修剪二叉搜索树 - 力扣（LeetCode）</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">trimBST</span>(<span class="params">self, root, low, high</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type root: TreeNode</span></span><br><span class="line"><span class="string">        :type low: int</span></span><br><span class="line"><span class="string">        :type high: int</span></span><br><span class="line"><span class="string">        :rtype: TreeNode</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        s=Solution() <span class="comment">#创建实例</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="string">&#x27;&#x27;&#x27; 检查根节点是否存在，如果不存在，则返回None（不是必需的，是用于处理某些特殊情况而添加的，例如在遍历一棵树的时候，你可能需要在递归到最后一个叶子节点后返回None，以便告诉调用方已经到达了书的底部，如果不进行这样的处理，在遍历到最后一个节点时，程序将抛出AttributeError错误）&#x27;&#x27;&#x27;</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">if</span> root.val&lt;low:<span class="comment">#如果当前根节点的值小于最小值，则只需判断当前节点的右节点</span></span><br><span class="line">            <span class="keyword">return</span> s.trimBST(root.right,low,high)</span><br><span class="line">        <span class="keyword">elif</span> root.val&gt;high: <span class="comment">#如果当前根节点的值大于最大值，则只需判断当前节点的左节点</span></span><br><span class="line">            <span class="keyword">return</span> s.trimBST(root.left,low,high)</span><br><span class="line">        <span class="keyword">else</span>: <span class="comment">#如果当前值位于最小值与最大值之间，则递归的处理左子树和右子树以返回修建后的树</span></span><br><span class="line">            root.left=s.trimBST(root.left,low,high)</span><br><span class="line">            root.right=s.trimBST(root.right,low,high)</span><br><span class="line">        <span class="keyword">return</span> root</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LC-203-移除链表元素</title>
       <link href="/post/2.html"/>
       <url>/post/2.html</url>
