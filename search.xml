@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>LC-2108-找出数组中的第一个回文字符串</title>
+      <link href="/post/4.html"/>
+      <url>/post/4.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="LeetCode-2108-找出数组中的第一个回文字符串"><a href="#LeetCode-2108-找出数组中的第一个回文字符串" class="headerlink" title="LeetCode-2108 找出数组中的第一个回文字符串"></a>LeetCode-2108 找出数组中的第一个回文字符串</h1><p>题目链接：<a href="https://leetcode.cn/problems/find-first-palindromic-string-in-the-array/">2108. 找出数组中的第一个回文字符串 - 力扣（LeetCode）</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">firstPalindrome</span>(<span class="params">self, words</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type words: List[str]</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        now=<span class="string">&quot;&quot;</span>      <span class="comment">#用于返回</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(words) <span class="keyword">is</span> <span class="number">0</span> :   <span class="comment">#如果words列表中没有字符串，则直接返回空字符串</span></span><br><span class="line">            <span class="keyword">return</span> now</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> words:        <span class="comment">#否则遍历words列表</span></span><br><span class="line">            list_x=<span class="built_in">list</span>(x)     <span class="comment">#将遍历到的字符串转成单字符的列表</span></span><br><span class="line">            point=<span class="number">0</span>            <span class="string">&#x27;&#x27;&#x27;设置一个计数器，用于计算当前运算到列表中的第几项来判断是否进行完，如果进行完则该字符串符合要求，否则  就是中途有不符合的项。&#x27;&#x27;&#x27;</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(list_x)/<span class="number">2</span>):<span class="comment">#只用遍历一半即可</span></span><br><span class="line">                <span class="keyword">if</span> list_x[i]!=list_x[<span class="built_in">len</span>(list_x)-<span class="number">1</span>-i]:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    point=point+<span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> point <span class="keyword">is</span> <span class="built_in">len</span>(list_x)/<span class="number">2</span>:</span><br><span class="line">                now=x</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>: <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">return</span> now</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LC-669-修剪二叉树</title>
       <link href="/post/3.html"/>
       <url>/post/3.html</url>
