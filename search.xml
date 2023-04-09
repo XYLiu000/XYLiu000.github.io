@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>LC-1801-替换字符串中的括号内容</title>
+      <link href="/post/7.html"/>
+      <url>/post/7.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="LeetCode-1807-替换字符串中的括号内容"><a href="#LeetCode-1807-替换字符串中的括号内容" class="headerlink" title="LeetCode-1807 替换字符串中的括号内容"></a>LeetCode-1807 替换字符串中的括号内容</h1><p>题目链接：<a href="https://leetcode.cn/problems/evaluate-the-bracket-pairs-of-a-string/submissions/">1807. 替换字符串中的括号内容 - 力扣（LeetCode）</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">evaluate</span>(<span class="params">self, s, knowledge</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :type knowledge: List[List[str]]</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        dict_know = &#123;k:v <span class="keyword">for</span> k,v <span class="keyword">in</span> knowledge&#125; <span class="comment"># 将二维列表转换为字典</span></span><br><span class="line">        new_s = s.replace(<span class="string">&#x27;(&#x27;</span>,<span class="string">&#x27;$&#x27;</span>).replace(<span class="string">&#x27;)&#x27;</span>, <span class="string">&#x27;$&#x27;</span>) <span class="comment"># 转换成便于处理的新格式</span></span><br><span class="line"></span><br><span class="line">        tokens = new_s.split(<span class="string">&#x27;$&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(tokens), <span class="number">2</span>):</span><br><span class="line">            key = tokens[i]</span><br><span class="line">            tokens[i] = dict_know.get(key, <span class="string">&quot;?&quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(tokens)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LC-1701-平均等待时间</title>
       <link href="/post/6.html"/>
       <url>/post/6.html</url>
